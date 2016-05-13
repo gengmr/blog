@@ -1,8 +1,12 @@
 ---
 title: ARM NEON 编程系列1 - 导论
 date: 2016-05-13 21:18:47
-categories: arm neon
-tags:
+categories: 
+ - 性能优化
+tags: 
+ - arm
+ - neon
+ - 性能优化
 ---
 
 ## 前言
