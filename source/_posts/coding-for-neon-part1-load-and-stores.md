@@ -1,8 +1,9 @@
 ---
-title: NEON编程1-数据加载与存储
+title: [翻译]NEON编程1-数据加载与存储
 date: 2016-06-04 16:59:24
 categories: 
  - 性能优化
+ - 翻译
 tags: 
  - arm
  - neon
