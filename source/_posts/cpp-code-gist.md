@@ -99,11 +99,11 @@ namespace{
 ```c++
 void dump_data(const char* filename, const char* data, const int data_len)
 {
-  //close file after dump data
+	//close file after dump data
 	FILE* fp = fopen(filename, "wb");
 	SCOPE_EXIT(if (fp){ fclose(fp); });
 
-  //delete data after process and dump
+	//delete data after process and dump
 	int* processed_data = new int[data_len];
 	SCOPE_EXIT(delete[] processed_data;);
 	for (int i = 0; i < data_len;i++)
