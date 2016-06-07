@@ -10,7 +10,7 @@ tags:
 
 这篇文章介绍了我在工程应用中经常会用到的c++工具代码。
 
-## 编译期的todolist
+## 编译期的todo list
 下面这些宏能产生编译期的TODO/WARN/FIXME等信息，有助于编写代码。
 ```c++
 //don't use these macros
@@ -114,5 +114,5 @@ void dump_data(const char* filename, const char* data, const int data_len)
 }
 ```
 
-# TODO
+## 未完待续
 
