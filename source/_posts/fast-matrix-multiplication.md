@@ -35,7 +35,7 @@ static void mm_generate(float* matA,float* matB,float* matC,const int M,const in
 ## 转化为分块计算
 矩阵转换为分块实现，时间复杂度仍然是O^3。
 ```c++
-tatic void mm_split(float* matA, float* matB, float* matC, const int M, const int N, const int K, const int strideA, const int strideB, const int strideC)
+static void mm_split(float* matA, float* matB, float* matC, const int M, const int N, const int K, const int strideA, const int strideB, const int strideC)
 {
 	memset(matC, 0, M*strideC*sizeof(float));
 	//C11 = A11xB11 + A12XB21
@@ -133,7 +133,7 @@ tatic void mm_split(float* matA, float* matB, float* matC, const int M, const in
 Strassen算法，时间复杂度是O^2.81。定义见：[wiki](https://en.wikipedia.org/wiki/Strassen_algorithm "Strassen algorithm")  
 c++实现：  
 ```c++
-tatic void mm_strassen(float* matA, float* matB, float* matC, const int M, const int N, const int K, const int strideA, const int strideB, const int strideC)
+static void mm_strassen(float* matA, float* matB, float* matC, const int M, const int N, const int K, const int strideA, const int strideB, const int strideC)
 {
 	if ((M <= 64) || (M%2 != 0 ||N%2 != 0 ||K%2!=0))
 	{
