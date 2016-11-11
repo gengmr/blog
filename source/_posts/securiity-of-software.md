@@ -48,5 +48,5 @@ lib目录如下：
 如何保护软件发型的二进制包，以防止算法细节被竞争对手知晓，需要细心的检查和测试，依据[之前一篇文章](http://hongbomin.com/2016/06/24/how-to-hide-symbols-of-c-functions/)中提到的函数符号和字符串隐藏的方法，再加上模型加密，基本可避免简单的分析手段。
 
 ## 附件
-1. [symbols.txt](securiity-of-software/symbols.txt)
-2. [strings.txt](securiity-of-software/strings.txt)
+1. [symbols.txt](https://github.com/xylcbd/xylcbd.github.io/blob/master/2016/11/09/securiity-of-software/symbols.txt)
+2. [strings.txt](https://github.com/xylcbd/xylcbd.github.io/blob/master/2016/11/09/securiity-of-software/lib_all_strings.txt)
