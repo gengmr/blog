@@ -28,7 +28,7 @@ EasyCNN提供了CNN的一些基本功能，包括：
 未来可能会继续优化它，包括卷积的Winograd优化，使用成熟BLAS库，多线程优化等。
 
 # EasyCNN实现
-有云：麻雀虽小，五脏俱全。虽然是个小项目，但是它已经基本拥有了现代软件中该有的基本构件，下面追条来说。
+有云：麻雀虽小，五脏俱全。虽然是个小项目，但是它已经基本拥有了现代软件中该有的基本构件，下面逐条来说。
 
 ## License
 这里用的是听起来就很厉害的[WTFPL](http://www.wtfpl.net/)(Do What the Fuck You Want to Public License)，直译就是“你想干嘛就干嘛的许可证”。  
@@ -48,10 +48,12 @@ c/c++项目的目录组织一般包括：
 * 例子：/examples，示例程序
 * 资源：/res，示例程序或者其他需要用到的资源文件
 
-基本看多了github就知道目录大概长什么样子了，依着具体项目需要增减目录。
+基本看多了github就知道一个项目目录大概应该长什么样子了，依着具体项目需要增减目录。
 
 ## 文档
-文档可能有很多部分组成，一般包括：项目介绍、API文档、示例程序解释、设计实现文档等。
+文档由很多部分组成，一般包括：项目介绍、API文档、示例程序解释、设计实现文档等。 
+
+这里暂时只有项目介绍 :( 。
 
 ## 测试
 测试一般包含2部分：单元测试和功能测试。  
@@ -75,7 +77,7 @@ EasyCNN是一个类caffe的第一代深度学习框架，即框架以层（Layer
 * 数据  
 > 数据包含2部分，一部分是输入数据（如图像数据）和回传梯度等，另一部分是网络参数等。  
 > 这里将这两部分数据分别抽象出数据结构（代码有精简）。  
-> 图像数据的抽象：DataBucket
+> 图像数据的抽象：DataBucket  
 ```c++
 namespace EasyCNN
 {
@@ -115,10 +117,11 @@ namespace EasyCNN
 	};
 }
 ```
-> 可以看出两者其实是一样的结构，主要是因为CNN网络中的卷积核需要number/channels/width/height等元信息。在最新的一些框架中这些元信息已经被统一包含在Shape抽象结构中了，Shape一般是一个int数组。由层自己定义参数Shape和数据Shape，运行时层自己依据Shape取出处理，所谓如人饮水冷暖自知。
+> 可以看出两者其实是一样的结构，主要是因为CNN网络中的卷积核也需要number/channels/width/height等元信息，为了包容统一，所以ParamBucket和DataBucket差不多。在最新的一些框架中这些元信息已经被统一包含在Shape抽象结构中了，Shape一般是一个int数组。由层自己定义参数Shape和数据Shape，运行时层自己依据Shape取出处理，所谓如人饮水冷暖自知。
 
 * 层（Layer）  
-> 层，第一代深度学习框架的基本概念之一。一般每个层包含forward和backward，分别对应前向和后向的数据流。  
+> 层（Layer），第一代深度学习框架的基本概念之一。一般每个层包含forward和backward，分别对应前向和后向的数据流。  
+> EasyCNN中模仿caffe，把激活函数也单独抽取出来作为层了。
 > EasyCNN中层的抽象是这样的：  
 ```c++
 namespace EasyCNN
@@ -162,11 +165,10 @@ namespace EasyCNN
 	};
 }
 ```
-EasyCNN中模仿caffe，把激活函数也单独抽取出来作为层了。
 
 * 损失函数（Loss）  
 >  损失函数，是CNN中反向传播的起始点，将CNN的残差往前传递。
-> EasyCNN中包含MSE和Cross Entropy这2种损失函数，也很容易添加其他Loss函数。  
+> EasyCNN目前包含MSE和Cross Entropy这2种损失函数，当然，也很容易添加其他Loss函数。  
 > 损失函数的抽象结构如下：  
 ```c++
 namespace EasyCNN
@@ -183,7 +185,7 @@ namespace EasyCNN
 ```
 
 * 优化方法（参数更新）  
-> 优化方法，这里偷了个懒，没有单独抽象出来。
+> 优化方法，EasyCNN这里偷了个懒，没有单独抽象出来。
 
 * 核心运行时
 > 核心运行时一般包括：配置（config）、日志（log）、错误处理（except、assert等）、工具函数（性能检测、字符串处理等）、基础数据处理函数（gemm、convolution等）  
