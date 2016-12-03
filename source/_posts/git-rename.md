@@ -29,3 +29,27 @@ export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 
 ' --tag-name-filter cat -- --branches --tags
 ```
+
+或者如果是多人参与的项目，只是想改一部分用户名的话，可以用下面的脚本。替换YOUR_OLD_EMAIL、YOUR_NAME、YOUR_EMAIL。 
+
+```shell
+#!/bin/sh
+
+git filter-branch --env-filter '
+
+OLD_EMAIL="YOUR_OLD_EMAIL"
+CORRECT_NAME="YOUR_NAME"
+CORRECT_EMAIL="YOUR_EMAIL"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags
+```
