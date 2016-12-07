@@ -182,6 +182,6 @@ print open('你好.txt'.decode('utf-8')).read().decode('utf-8').encode('gbk')
 对比例6、例7、例8、例9、例10，可以发现python读取文件时，输入的文件名必须是python内部默认编码格式，如果不是则需要转换成默认编码，python获取到的文件内容是如果需要print出来不乱吗，均需要做转换。
 
 ## 参考
-* 1. (字符编解码的故事（ascii，ansi，unicode，utf-8区别）)[http://www.imkevinyang.com/2009/02/%E5%AD%97%E7%AC%A6%E7%BC%96%E8%A7%A3%E7%A0%81%E7%9A%84%E6%95%85%E4%BA%8B%EF%BC%88ascii%EF%BC%8Cansi%EF%BC%8Cunicode%EF%BC%8Cutf-8%E5%8C%BA%E5%88%AB%EF%BC%89.html]
-* 2. (谈谈Unicode编码，简要解释UCS、UTF、BMP、BOM等名词)[http://www.fmddlmyy.cn/text6.html]
-* 3.(python编码问题)[http://www.cnblogs.com/huxi/articles/1897271.html]
+1. [字符编解码的故事（ascii，ansi，unicode，utf-8区别）](http://www.imkevinyang.com/2009/02/%E5%AD%97%E7%AC%A6%E7%BC%96%E8%A7%A3%E7%A0%81%E7%9A%84%E6%95%85%E4%BA%8B%EF%BC%88ascii%EF%BC%8Cansi%EF%BC%8Cunicode%EF%BC%8Cutf-8%E5%8C%BA%E5%88%AB%EF%BC%89.html)
+2. [谈谈Unicode编码，简要解释UCS、UTF、BMP、BOM等名词](http://www.fmddlmyy.cn/text6.html)
+3. [python编码问题](http://www.cnblogs.com/huxi/articles/1897271.html)
