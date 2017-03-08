@@ -32,14 +32,18 @@ Markdown是一种纯文本格式，任何文本编辑器都可以进行Markdown�
 使用Chrome浏览器作为Markdown渲染器，使用notepad++作为编辑器。
 
 效果：
-![chrome-markdown](./using-chrome-as-markdown-editor/chrome-markdown.png)
+![chrome-markdown](./chrome-markdown.png)
 
 安装步骤：
 
 1. 安装Chrome插件[Markdown Preview Plus](https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl)
 2. 在本地使用任意编辑器编辑Markdown文件，假设为test.md
-3. 使用Chrome打开tets.md，并且设置Markdown Preview Plus关联md格式，每秒reload，如果需要甚至还可以开启公式latex的渲染。
+3. 使用Chrome打开test.md，并且设置Markdown Preview Plus关联md格式，每秒reload，如果需要甚至还可以开启公式latex的渲染。
 
 ---
 
 Notepad++与chrome Markdown Preview Plus组合，编辑Markdown文件so easy！
+
+$$
+\begin{equation} \label{euler} e^{\pi i} + 1 = 0 \end{equation}
+$$

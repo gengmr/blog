@@ -38,13 +38,13 @@ C++跨平台是指同一份代码可以不加修改的在不同的平台上编�
 有些情况下不得不使用非标准c++的时候，同样可以编写跨平台的代码。这时候需要定义统一的接口，然后在不同的平台下做不同的实现。
 这时候就需要做平台检测，一般可通过系统或者编译器预定义的宏做检测。
 * 操作系统检测  
-![](./cpp-cross-platform-guide/os_detect_macro.png)
+![](./os_detect_macro.png)
 
 * 编译器检测  
-![](./cpp-cross-platform-guide/compiler_detect_macro.png)
+![](./compiler_detect_macro.png)
 
 * CPU检测  
-![](./cpp-cross-platform-guide/cpu_detect_macro.png)
+![](./cpu_detect_macro.png)
 
 ## c++标准
 c++标准包括：C++ 98, c++03, c++11, c++14, c++17，中间还有若干修订版本。更多参考：[history of c++](http://www.cplusplus.com/info/history/)。
@@ -79,7 +79,7 @@ size_t：size_t不同平台具有不同大小。
 
 ## char signed or unsigned ?
 下面的代码可能会出问题。其中，MAX=10, EOF=-1。
-![](./cpp-cross-platform-guide/signed_unsigned_issue.png)
+![](./signed_unsigned_issue.png)
 
 ## 数据类型
 目前c++中可以使用<cstdint>中定义的数据类型，包括：uint8_t，int8_t，uint32_t，int32_t等，这些数据类型在不同平台和编译器下均保持一致。在定义数据结构或者二进制文件时，使用<cstdint>中的数据类型可减少数据类型不一致的问题。
