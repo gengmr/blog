@@ -70,7 +70,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/xylcbd/xylcbd.github.io.git
+  repository: 
+    github: https://github.com/xylcbd/xylcbd.github.io.git
+    coding: https://git.coding.net/xylcbd/xylcbd.git
   branch: master
 
 # Extensions
