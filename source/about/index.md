@@ -1,20 +1,16 @@
 ---
-title: about
+title: 关于我
 date: 2016-05-11 21:12:23
 ---
 
 洪柏敏  
 ---
 - - -
-一个热爱技术的程序员    
 职业：机器鼓励师  
 梦想：财务自由，走遍天涯
-- - -
-```c++
-#include <iostream>
+E-mail：[dahanhbm@gmail.com](mailto:dahanhbm@gmail.com)
+github: https://github.com/xylcbd
 
-int main(int,char*[])
-{
-  std::cout<<"hello world!"<<std::endl;
-}
-```
+- - -
+
+国内访问：[http://xylcbd.coding.me/](http://xylcbd.coding.me/)

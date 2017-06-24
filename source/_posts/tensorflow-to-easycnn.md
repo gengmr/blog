@@ -10,9 +10,9 @@ tags:
  - TensorFlow
 ---
 
-EasyCNN是一个轻量级的CNN框架，纯C++11编写，不依赖于任何库，可跨平台应用于Linux/Windows/Android/iOS等平台。  
+[EasyCNN](https://github.com/xylcbd/EasyCNN)是一个轻量级的CNN框架，纯C++11编写，不依赖于任何库，可跨平台应用于Linux/Windows/Android/iOS等平台。  
 
-TensorFlow是Google开发的深度学习框架，由专业工程人员与算法开发人员合作开发而成，是目前最火的开源深度学习框架。  
+[TensorFlow](https://www.tensorflow.org/)是Google开发的深度学习框架，由专业工程人员与算法开发人员合作开发而成，是目前最火的开源深度学习框架。  
 
 EasyCNN具有极轻量级的优点，很容易port到任何使用场景，而TensorFlow设计训练模型非常方便高效。  
 
