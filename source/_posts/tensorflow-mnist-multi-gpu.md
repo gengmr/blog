@@ -1,5 +1,5 @@
 ---
-title: TensorFlow
+title: TensorFlow多GPU并行
 date: 2017-06-27 21:09:00
 categories:
  - TensorFlow

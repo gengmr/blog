@@ -1,7 +1,7 @@
----  
-title: linux上常用的命令  
-date: 2017-05-27 12:19:03  
-categories:  
+---
+title: linux上常用的命令
+date: 2017-06-27 23:19:03
+categories:
  - 工具
 tags:
  - Linux
