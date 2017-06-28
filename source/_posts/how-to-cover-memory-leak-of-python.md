@@ -41,7 +41,23 @@ gc.collect()
 print 'after release, memory: %d MB' % get_memory_usage()
 ```
 
-出现这种内存泄露时，模型训练基本只能训练几个Epoch就会出现OOM。
+第11行内存释放结果：  
+```shell
+before load, memory: 25 MB
+after load, memory: 220 MB
+before release, memory: 220 MB
+after release, memory: 27 MB
+```
+
+第12行内存释放结果：  
+```shell
+before load, memory: 23 MB
+after load, memory: 1406 MB
+before release, memory: 1406 MB
+after release, memory: 1170 MB
+```
+
+可以看到第12行内存泄露严重。出现这种内存泄露时，模型训练基本只能训练几个Epoch就会出现OOM。
 
 ## 大力出奇迹
 这种问题当然最优的是从根源解决，即研究清楚Python的GC机制，解决内存泄露。  
