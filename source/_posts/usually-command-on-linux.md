@@ -64,6 +64,10 @@ git clone --recursive git://github.com/foo/bar.git
 scp foo.bar user@remote:/data/
 ```
 
+### 组合字符串
+```shell
+cat train.txt |xargs -i echo `pwd`/{} 0 >train.lst
+```
 
 ---
 待续...
