@@ -30,21 +30,16 @@ tags:
 在看到一个库之前，一般喜欢先翻一下目录。ncnn的目录还是比较清晰简单的：
 
 * ./
-
   顶层目录包含LICENSE，README，CMakeLists以及android、iOS的编译配置。
 
 * ./examples/
-
   该目录下包含一个使用squeezenet做图像分类的c++例子程序，android例子程序，以及squeezenet模型文件。就喜欢这样的！啥都不用管就能跑起来。
 
 * ./src/
-
-  * 目录顶层下是一些基础代码，如宏定义，平台检测，mat数据结构，layer定义，blob定义，net定义等。  
-
-
-  * ./src/layer下是所有的layer定义代码
-  * ./src/layer/arm是arm下的计算加速的layer
-  * ./src/layer/x86是x86下的计算加速的layer。
+  1. 目录顶层下是一些基础代码，如宏定义，平台检测，mat数据结构，layer定义，blob定义，net定义等。  
+  2. ./src/layer下是所有的layer定义代码
+  3. ./src/layer/arm是arm下的计算加速的layer
+  4. ./src/layer/x86是x86下的计算加速的layer。
 
 * ./tools/
 
