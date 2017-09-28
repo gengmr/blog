@@ -49,6 +49,12 @@ ps -ef|grep your_kill_target_name |grep -v 'grep'| awk '{print \$2}'|xargs kill 
 ls -alt log | tail -n +2 | awk 'BEGIN {FS=" "} NR > 3 {print \$NF}'|xargs -i rm -r log/{}
 ```
 
+### 删除指定文件之外的其他所有文件
+```shell
+#删除当前目录下spec.file之外其他所有文件
+rm -rf !(spec.file)
+```
+
 ### 禁用GPU CUDA
 ```shell
 CUDA_VISIBLE_DEVICES="" python train.py
