@@ -14,3 +14,6 @@ github: https://github.com/xylcbd
 - - -
 
 国内访问：[http://xylcbd.coding.me/](http://xylcbd.coding.me/)
+
+![qrcode](./qrcode.jpg)
+<p align="center">欢迎关注微信公众号</p>
